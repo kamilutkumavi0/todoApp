@@ -3,17 +3,20 @@ from lib import funcs, todos, date
 
 todo_list = funcs.todo_list_definer()
 
-
+#ana ekran
 if __name__ == "__main__":
     todo_list = funcs.todo_list_definer()
     print(todo_list)
+  
     while True:
+ 
         print("""
 1. Görev Ekle
 2. Görev Göster
 3. Görev Sil
 4. Çıkış
             """)
+
         a = input("Seçiminiz (1/2/3/4) ")
         if a == "4":
             break

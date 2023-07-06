@@ -1,6 +1,9 @@
 import pickle
 from lib.todos import Todo
 def todo_list_definer() -> list:
+    """
+    yapılaçaklar listeleri
+    """
     try:
         file = open("datas/todo_data.pickle", "rb")
         todo_list = pickle.load(file)
@@ -9,10 +12,17 @@ def todo_list_definer() -> list:
         file = open("datas/todo_data.pickle", "wb")
         pickle.dump(todo_list,file)
     return todo_list
+
 def update(todo_list: list):
+    """
+    list günçelleme
+    """
     file = open("datas/todo_data.pickle", "wb")
     pickle.dump(todo_list,file)
 def print_todos(todo_list: list):
+    """
+    todo list etrafına çizgi ekler
+    """
     alt_cizgi = ""
     ust_cizgi = ""
     for i in range(38):
